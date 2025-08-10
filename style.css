@@ -1,0 +1,169 @@
+body {
+    margin:0px;
+    background-color: white;
+    height: 2000px;
+}
+
+/*
+██╗  ██╗███████╗ █████╗ ██████╗ ███████╗██████╗ 
+██║  ██║██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗
+███████║█████╗  ███████║██║  ██║█████╗  ██████╔╝
+██╔══██║██╔══╝  ██╔══██║██║  ██║██╔══╝  ██╔══██╗
+██║  ██║███████╗██║  ██║██████╔╝███████╗██║  ██║
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝
+*/
+
+#Header {
+    /*background:linear-gradient(0.25turn,#e68e29, #ef8f21);*/
+    line-height: 10px;
+    z-index:99;
+    margin-bottom:0px;
+    /*box-shadow: 0px 5px 5px 12px #e68e29;*/
+    transition: all 0.5s linear;
+}
+
+.backgroundHeader {
+    background-color: white;
+    transition: background-color 1s linear;
+    height:90px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+.sticky #Profil_Picture {
+    opacity:0;
+    transition: opacity 0.5s linear;
+}
+
+#Profil_Picture {
+    width:40px;
+    height:40px;
+    border-radius: 20px;
+    filter: brightness(0.9);
+    margin:20px;
+}
+
+#Header table {
+    float: right;
+    border-collapse: collapse;
+    height:50px;
+    border-radius: 10px;
+    background-color: white;
+    margin:20px;
+    opacity: 1;
+}
+
+.Menu_Selections {
+    transform: scale(1);
+    padding:0px 20px 0px 20px;
+    border-radius: 10px;
+
+    background-color: #dc841f00;
+    transition: 0.6s;
+    opacity: 1;
+}
+
+.Menu_Selections a {
+    text-decoration: none;
+    user-select: none;
+    color:black;
+    opacity: 1;
+}
+
+.Menu_Selections:hover {
+    border-radius: 10px;
+    background-color: #dc841f;
+    opacity: 1;
+
+    animation-name: button_fade;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes button_fade {
+    0%   {
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+    }
+    50% {
+        filter: brightness(0.9);
+        -webkit-filter: brightness(0.9);
+    }
+    100%  {
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+    }
+}
+
+.Menu_Selections:active {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+/*
+██╗  ██╗ █████╗ ███╗   ███╗███████╗  ██████╗  █████╗  ██████╗ ███████╗
+██║  ██║██╔══██╗████╗ ████║██╔════╝  ██╔══██╗██╔══██╗██╔════╝ ██╔════╝
+███████║██║  ██║██╔████╔██║█████╗    ██████╔╝███████║██║  ██╗ █████╗  
+██╔══██║██║  ██║██║╚██╔╝██║██╔══╝    ██╔═══╝ ██╔══██║██║  ╚██╗██╔══╝  
+██║  ██║╚█████╔╝██║ ╚═╝ ██║███████╗  ██║     ██║  ██║╚██████╔╝███████╗
+╚═╝  ╚═╝ ╚════╝ ╚═╝     ╚═╝╚══════╝  ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+*/
+
+#Welcome_Page {
+    height: 600px;
+    background-color: rgb(209, 205, 205);
+    margin-top:-30px;
+}
+
+#Title {
+    font-size: 50px;
+    margin:30px;
+    padding-top:100px;
+}
+
+#Name {
+    margin:32px;
+    font-size:25px;
+    margin-top:-10px;
+}
+
+#typing-anim {
+    width: 12ch;
+    animation: typing 1s steps(12), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3em;
+}
+
+#typing-anim::selection {
+    color: white;
+    background-color: #FFA737;
+}
+
+@keyframes typing {
+    from {width: 0;}
+}
+
+@keyframes reverseTyping {
+    from {width: var(--message-current-length);}
+}
+      
+@keyframes blink {
+   50% {border-color: transparent;}
+}
+
+/*
+COLOR PALETTE
+- Orange Peel : FFA737
+- Fulvous : DC851F
+- Field Drab : 7E5920
+- Drab dark brown : 45462A
+- Jet : 343330
+*/
